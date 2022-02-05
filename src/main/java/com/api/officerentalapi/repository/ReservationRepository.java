@@ -1,0 +1,13 @@
+package com.api.officerentalapi.repository;
+
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.api.officerentalapi.entity.Reservation;
+
+@Repository
+public interface ReservationRepository extends JpaRepository<Reservation, Integer> {
+	Reservation findBybookingid(Integer bookingid);
+	
+}
